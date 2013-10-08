@@ -39,6 +39,12 @@ pages = [ {
                 },
               ]
           },
+          {
+            'template': 'tutorials.html',
+            'path': 'tutorials',
+            'tabname': 'Tutorials',
+            'steps': ['Setup', 'Calibrate', 'Code', 'Play'],
+          },
         ]
 
 def main():
