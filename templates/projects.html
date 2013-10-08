@@ -2,6 +2,31 @@
 
 {% block body %}
 
-This is the projects page stub.
+<div id="video-container">
+
+</div>
+
+<div class="row-fluid">
+    <ul class="thumbnails">
+        {% for project in current_page['projects'] %}
+            <li class="span4">
+                <div class="thumbnail" data-vimeoID="{{project['vimeo_id']}}">
+                    <div class="project-thumbnail-img-container">
+                        <img src="{{project['image_path']}}">
+                    </div>
+                    <div class="caption">
+                        <p class="text-center">
+                            {{project['title']}}
+                        </p>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
 
 {% endblock body %}
+
+{% block js %}
+<script src="/static/js/projects.js"></script>
+{% endblock js %}

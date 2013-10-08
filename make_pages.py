@@ -26,7 +26,18 @@ pages = [ {
             'template': 'projects.html',
             'path': 'projects',
             'tabname': 'Projects',
-            'projects': ['project1.html', 'project2.html'],
+            'projects': [
+                {
+                    'title': 'WaaZam!: Creative Play at a Distance',
+                    'image_path': '/static/img/waazam_logo.jpg',
+                    'vimeo_id': '57332391',
+                },
+                {
+                    'title': 'Add depth to your online chats',
+                    'image_path': '/static/img/seth_and_arturo.png',
+                    'vimeo_id': '44718909',
+                },
+              ]
           },
         ]
 
