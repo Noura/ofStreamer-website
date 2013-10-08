@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 """ Script to render all my jinja templates into web pages
     Noura Howell, 2013

@@ -16,8 +16,7 @@ Command line steps to run your own local version
 
     git clone https://github.com/Noura/ofStreamer-website.git
     cd ofStreamer-website
-    chmod +x make_pages.py
-    ./make_pages.py
+    python make_pages.py
     cd to-deploy
     python -m SimpleHTTPServer
 
