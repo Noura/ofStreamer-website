@@ -2,15 +2,31 @@
     <head>
         <title>ofStreamer</title>
 
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
         <link rel="stylesheet" href="/static/css/app.css">
     </head>
     <body>
 
+        <div class="container">
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="/">ofStreamer</a>
+                    <ul class="nav">
+                      {% for page in pages %}
+                        <li class="{%- if current_page['tabname'] == page['tabname'] -%} active {%- endif -%}">
+                            <a href="/{{page['path']}}">{{page['tabname']}}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
         {% block body %}
 
         {% endblock body %}
+
+        </div>
 
         {% block js %}
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script> 
