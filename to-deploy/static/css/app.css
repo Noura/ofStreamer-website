@@ -28,6 +28,7 @@ img {
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
     width: 150px;
+    padding: 0;
 }
 .nav.nav-list.affix > li > a {
     display: block;
