@@ -1,3 +1,4 @@
-body {
-    background: rgb(255, 255, 250);
+img {
+    max-width: 100%;
+    margin: 1em 0;
 }
