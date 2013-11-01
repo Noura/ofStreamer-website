@@ -17,7 +17,7 @@ TARGET = 'to-deploy/'
 pages = [ {
             # template jinja2 will use
             'template': 'index.html',
-            # URL path after the www.mywebsit.com/ part
+            # URL path after the www.mywebsite.com/ part
             'path': '',
             # Other info may be passed to the template
             'tabname': 'Home',
