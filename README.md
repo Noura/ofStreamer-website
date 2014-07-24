@@ -15,7 +15,7 @@ Make sure you have the Python dependencies listed in requirements.txt.
 Command line steps to run your own local version
 
     git clone https://github.com/Noura/ofStreamer-website.git
-    cd ofStreamer-website
+    cd ofStreamer-website 
     python make_pages.py
     cd to-deploy
     python -m SimpleHTTPServer

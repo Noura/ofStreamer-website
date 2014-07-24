@@ -20,7 +20,7 @@ pages = [ {
             # URL path after the www.mywebsite.com/ part
             'path': '',
             # Other info may be passed to the template
-            'tabname': 'Home',
+            'tabname': 'Introduction',
           },
           {
             'template': 'projects.html',

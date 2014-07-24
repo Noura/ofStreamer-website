@@ -1,6 +1,6 @@
 <html lang="en">
     <head>
-        <title>ofStreamer</title>
+        <title>OFStreamer</title>
 
         <!--TODO put google analytics script here -->
 
@@ -13,7 +13,7 @@
 
             <div class="navbar">
                 <div class="navbar-inner">
-                    <a class="brand" href="/">ofStreamer</a>
+                    <a class="brand" href="/">OFStreamer</a>
                     <ul class="nav">
                       {% for page in pages %}
                         <li class="{%- if current_page['tabname'] == page['tabname'] -%} active {%- endif -%}">
@@ -23,10 +23,10 @@
                     </ul>
                 </div>
             </div>
+            
+            {% block body %}
 
-        {% block body %}
-
-        {% endblock body %}
+            {% endblock body %}
 
         </div>
 
