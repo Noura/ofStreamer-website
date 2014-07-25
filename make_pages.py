@@ -45,6 +45,20 @@ pages = [ {
             'tabname': 'Tutorials',
             'steps': ['Setup', 'Calibrate', 'Code', 'Play'],
           },
+          {
+            'template': 'download.html',
+            # URL path after the www.mywebsite.com/ part
+            'path': 'download',
+            # Other info may be passed to the template
+            'tabname': 'Download',
+          },
+          {
+            'template': 'about.html',
+            # URL path after the www.mywebsite.com/ part
+            'path': 'about',
+            # Other info may be passed to the template
+            'tabname': 'About',
+          },
         ]
 
 def main():
