@@ -6,6 +6,7 @@
 
 import os, os.path, shutil, codecs, sys
 import jinja2
+from markdown import markdown
 
 # relative path to output directory for rendered templates
 TARGET = 'to-deploy/'
@@ -60,13 +61,18 @@ pages = [ {
             'tabname': 'About',
           },
         ]
+        
+def safe_markdown(text):
+    return jinja2.Markup(markdown(text, extensions=['fenced_code']))
+
 
 def main():
     here = os.path.dirname(__file__)
     deploy_target = os.path.join(here, TARGET)
     loader = jinja2.FileSystemLoader(os.path.join(here, 'templates'))
     templates = jinja2.Environment(loader=loader)
-
+    templates.filters['markdown'] = safe_markdown
+    
     if os.path.exists(deploy_target):
         shutil.rmtree(deploy_target)
     os.makedirs(deploy_target)

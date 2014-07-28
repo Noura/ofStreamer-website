@@ -1,54 +1,40 @@
-{% extends "base.html" %}
+{% extends "markdown_template.html" %}
 
-{% block body %}
+{% block markdown %}
+<!--div class="span3">
+    <ul class="nav nav-list affix">
+        {% for step in current_page['steps'] %}
+            <li class="tutorial-step-li">
+                <a href="#step{{loop.index}}" class="link-to-tutorial-step">
+                    <i class="icon-chevron-right"></i>
+                    {{loop.index}}.&nbsp;{{step}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div-->
 
-<div class="row">
+# ofxGstRTP 
 
-    <div class="span3">
-        <ul class="nav nav-list affix">
-            {% for step in current_page['steps'] %}
-                <li class="tutorial-step-li">
-                    <a href="#step{{loop.index}}" class="link-to-tutorial-step">
-                        <i class="icon-chevron-right"></i>
-                        {{loop.index}}.&nbsp;{{step}}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+ofxGstRTP is part of a toolkit in development called OFStreamer, which is a set of openFrameworks addons designed to make it easier to use GStreamer on OSX and Windows. The toolkit is being developed by [Arturo Castro](http://arturocastro.net/) and [Seth Hunter](http://www.perspectum.com/) for applications that require streaming video, audio and metadata between remote locations. 
 
-    <div class="span8">
-        <div data-step="1" class="tutorial-step">
-            <h2>1. Setup</h2>
-            <p> We invite you to imagine a future in which creative technologists develop immersive teleprensence applications that are as easy to use Skype but more creative, immersive and engaging. Research has shown that people want to move from talking heads to shared experiences. As imaging sensors become more affordable and network bandwidth increases - experiences that were once reserved for galleries will soon be avilable in connected homes. </p>
+You can use the examples included in ofxGstRTP to send multiple compressed channels of data between remote peer-to-peer networks. For example, send h.264 compressed video and depth, compressed audio, and osc metadata between applications in different countries.  
 
-            <p> The applications we have developed thusfar have focused on seperated families and language learning. We hope that many unexplored domains such as co-broadcasting, co-presentation, co-viewing media, online education, social exercise, family play, social gameplay...will be developed with these tools. We aspire to form a community of developers who are inspired by the potential of richer shared experiences at a distance. </p>
-        </div>
-        <div data-step="2" class="tutorial-step">
-            <h2>2. Calibrate</h2>
-            <p>Calibration will help make sure that your Kinect can find you! And that you can send data an appropriate speed for your internet connection. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus erat vel quam sollicitudin varius. Sed arcu tellus, malesuada sit amet mauris a, bibendum egestas velit. Fusce tincidunt sodales dui eget rutrum. Mauris ut placerat velit, vel fermentum sapien. Quisque tincidunt, nisi sagittis faucibus faucibus, sapien libero lobortis urna, in adipiscing risus sapien a ligula. Integer eu fermentum arcu. Mauris varius erat in enim fermentum, at ultrices tellus malesuada.</p>
-            <p>Phasellus vulputate viverra ultricies. Quisque faucibus convallis lorem, ac suscipit ante sagittis id. Sed odio nisl, laoreet vel lacus quis, venenatis porta sem. Sed neque diam, venenatis sit amet enim ut, malesuada dictum lorem. Aenean a nulla augue. Aliquam faucibus varius tincidunt. Donec vestibulum egestas sapien in lacinia. Sed tempor, lorem vitae lacinia hendrerit, lectus quam elementum ipsum, quis pellentesque orci augue eu ante. In ac diam id nibh volutpat convallis. Cras auctor diam quis sem cursus, sit amet facilisis mi tincidunt. Maecenas at diam nec magna dapibus aliquam. Ut dui arcu, dignissim ut vestibulum sit amet, condimentum a orci.</p>
-        </div>
-        <div data-step="3" class="tutorial-step">
-            <h2>3. Code</h2>
-            <p>Now you can start coding awesome applications! Check out some examples <a href="https://github.com/arturoc/ofxGstRTP">here</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus erat vel quam sollicitudin varius. Sed arcu tellus, malesuada sit amet mauris a, bibendum egestas velit. Fusce tincidunt sodales dui eget rutrum. Mauris ut placerat velit, vel fermentum sapien. Quisque tincidunt, nisi sagittis faucibus faucibus, sapien libero lobortis urna, in adipiscing risus sapien a ligula. Integer eu fermentum arcu. Mauris varius erat in enim fermentum, at ultrices tellus malesuada.</p>
-            <p>Phasellus vulputate viverra ultricies. Quisque faucibus convallis lorem, ac suscipit ante sagittis id. Sed odio nisl, laoreet vel lacus quis, venenatis porta sem. Sed neque diam, venenatis sit amet enim ut, malesuada dictum lorem. Aenean a nulla augue. Aliquam faucibus varius tincidunt. Donec vestibulum egestas sapien in lacinia. Sed tempor, lorem vitae lacinia hendrerit, lectus quam elementum ipsum, quis pellentesque orci augue eu ante. In ac diam id nibh volutpat convallis. Cras auctor diam quis sem cursus, sit amet facilisis mi tincidunt. Maecenas at diam nec magna dapibus aliquam. Ut dui arcu, dignissim ut vestibulum sit amet, condimentum a orci.</p>
-        </div>
-        <div data-step="4" class="tutorial-step">
-            <h2>4. Play</h2>
-            <p>Have creative shared interactive experiences at a distance. More depth and meaning and interaction with art and each other! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus erat vel quam sollicitudin varius. Sed arcu tellus, malesuada sit amet mauris a, bibendum egestas velit. Fusce tincidunt sodales dui eget rutrum. Mauris ut placerat velit, vel fermentum sapien. Quisque tincidunt, nisi sagittis faucibus faucibus, sapien libero lobortis urna, in adipiscing risus sapien a ligula. Integer eu fermentum arcu. Mauris varius erat in enim fermentum, at ultrices tellus malesuada.</p>
-            <p>Phasellus vulputate viverra ultricies. Quisque faucibus convallis lorem, ac suscipit ante sagittis id. Sed odio nisl, laoreet vel lacus quis, venenatis porta sem. Sed neque diam, venenatis sit amet enim ut, malesuada dictum lorem. Aenean a nulla augue. Aliquam faucibus varius tincidunt. Donec vestibulum egestas sapien in lacinia. Sed tempor, lorem vitae lacinia hendrerit, lectus quam elementum ipsum, quis pellentesque orci augue eu ante. In ac diam id nibh volutpat convallis. Cras auctor diam quis sem cursus, sit amet facilisis mi tincidunt. Maecenas at diam nec magna dapibus aliquam. Ut dui arcu, dignissim ut vestibulum sit amet, condimentum a orci.</p>
-        </div>
-    </div>
+The addon uses [ofxXMPP](https://github.com/arturoc/ofxXMPP) to establish the connection using jabber, google talk or any other xmpp compatible server. There's some examples that demonstrate how to establish a connection with another computer using these services. In addition, we resolve NAT traversal issues (computers being behind routers) using [ofxNice](https://github.com/arturoc/ofxXMPP) so you don't have to use static IPs or setup a VPN, potentially making your applicaiton scalable to many clients. NAT traversal will work with most routers (92%) except symetric routers in big organizations and hotels. You'll also need [ofxDepthStreamCompression](https://github.com/arturoc/ofxDepthStreamCompression) that commpresses the depth stream to have good quality point clouds and [ofxSnappy](https://github.com/arturoc/ofxSnappy) used also to compress the depth and osc streams.
 
-</div>
+There's an experimental echo cancelation module, disabled by default that can be enabled in src/ofxGstRTPConstants.h. It depends on [ofxEchoCancel](https://github.com/arturoc/ofxEchoCancel)
 
-{% endblock body %}
+Currently we have examples working on OSX and Linux and are working on porting the examples to windows 7 and 8. 
 
-{% block js %}
-<script type="text/javascript">
-    // these variables are available within tutorials.js
-    var steps = {{current_page['steps']|safe}};
-</script>
-<script src="/static/js/tutorials.js"></script>
-{% endblock js %}
+
+## Installing gstreamer
+
+This addon also depends on gstreamer, in linux it's installed by default as part of openFrameworks. On OSX and Windows you'll need to install it manually. To make this process easier please use the [ofxGtreamer](https://github.com/arturoc/ofxGstreamer) addon and follow the directions included there to install the dependencies. 
+
+## Running the examples
+
+- This is based on openFramewors master (2014.02.27), so you'll need to use latest master from github or a [nightly build](http://www.openframeworks.cc/nightlybuilds.html) To generate the projects correctly you'll also need the latest version of the PG as of 2014.02.27
+
+- Almost all examples contain a settings_example.xml file that needs to be renamed to settings.xml and modified with the correct settings.
+
+{% endblock %}
